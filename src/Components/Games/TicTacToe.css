@@ -1,0 +1,187 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e0e0e0;
+  /* Light grey background for the page */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.tic-tac-toe {
+  background-color: #fff;
+  /* White background for the game area */
+  border-radius: 10px;
+  /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  /* Soft shadow for depth */
+  padding: 20px;
+  text-align: center;
+}
+
+#board {
+  display: grid;
+  /* Use grid layout for the board */
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 columns */
+  gap: 10px;
+  /* Space between cells */
+  margin-bottom: 20px;
+}
+
+.cell {
+  width: 100px;
+  /* Fixed width for cells */
+  height: 100px;
+  /* Fixed height for cells */
+  font-size: 48px;
+  /* Larger font for better visibility */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #333;
+  /* Darker border for visibility */
+  cursor: pointer;
+  /* Pointer cursor on hover */
+  background-color: #f0f0f0;
+  /* Light grey background for cells */
+  transition: background-color 0.3s, transform 0.2s;
+  /* Smooth transitions */
+}
+
+.cell:hover {
+  background-color: #ddd;
+  /* Darker grey on hover */
+  transform: scale(1.05);
+  /* Slight zoom effect on hover */
+}
+
+.cell-x {
+  color: #007BFF;
+  /* Blue color for X */
+}
+
+.cell-o {
+  color: #FF5733;
+  /* Red color for O */
+}
+
+.winner {
+  background-color: #ffeb3b;
+  /* Highlight winning cells with yellow */
+  color: #4CAF50;
+  /* Green text for visibility */
+  font-weight: bold;
+  /* Make winning text bold */
+}
+
+#statusMessage {
+  font-size: 24px;
+  /* Larger status message font */
+  margin: 20px 0;
+  /* Margin around status message */
+  color: #333;
+  /* Dark text for clarity */
+}
+
+#resetButton {
+  padding: 10px 20px;
+  /* Padding for the reset button */
+  font-size: 18px;
+  /* Font size for button text */
+  background-color: #28a745;
+  /* Green background */
+  color: white;
+  /* White text */
+  border: none;
+  /* No border */
+  border-radius: 5px;
+  /* Rounded corners */
+  cursor: pointer;
+  /* Pointer cursor on hover */
+  transition: background-color 0.3s;
+  /* Smooth background color transition */
+}
+
+#resetButton:hover {
+  background-color: #218838;
+  /* Darker green on hover */
+}
+
+#resetButton:focus {
+  outline: none;
+  /* Remove outline on focus */
+}
+@keyframes fall {
+  0% {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  /* Width of the confetti piece */
+  height: 20px;
+  /* Height of the confetti piece */
+  background-color: #ff0;
+  /* Default color */
+  opacity: 0.7;
+  bottom: 100%;
+  /* Start above the viewport */
+  animation: fall linear forwards;
+}
+
+.confetti:nth-child(1) {
+  background-color: #ff0;
+  /* Yellow */
+}
+
+.confetti:nth-child(2) {
+  background-color: #0f0;
+  /* Green */
+}
+
+.confetti:nth-child(3) {
+  background-color: #00f;
+  /* Blue */
+}
+
+.confetti:nth-child(4) {
+  background-color: #f00;
+  /* Red */
+}
+
+.confetti:nth-child(5) {
+  background-color: #ff69b4;
+  /* Pink */
+}
+
+.confetti:nth-child(6) {
+  background-color: #ffa500;
+  /* Orange */
+}
+
+/* Optional: Animation variations */
+@keyframes fall {
+  0% {
+    transform: translateY(-100%) rotate(0deg);
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,93 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.matching-pairs-game {
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* 4 cards per row */
+  gap: 10px;
+  /* Space between cards */
+}
+
+.card {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  /* Size of emojis */
+  color: #fff;
+  background-color: #007bff;
+  /* Bootstrap primary color */
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  /* Zoom effect on hover */
+}
+
+.card.opened {
+  background-color: #28a745;
+  /* Green when opened */
+}
+
+.reset-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4caf50;
+  /* Green */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.reset-button:hover {
+  background-color: #45a049;
+  /* Darker green */
+}
+
+@media (max-width: 600px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 cards per row on small screens */
+  }
+
+  .card {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    /* Smaller size of emojis */
+  }
+
+  .reset-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}

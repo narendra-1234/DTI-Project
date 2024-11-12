@@ -1,0 +1,54 @@
+.simon-game {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  gap: 15px;
+  margin: 20px auto;
+  max-width: 350px;
+}
+
+.color-button {
+  width: 150px;
+  height: 150px;
+  border-radius: 15px;
+  transition: opacity 0.2s, transform 0.2s;
+  cursor: pointer;
+}
+
+.color-button.active {
+  opacity: 0.7;
+  transform: scale(1.05);
+}
+
+.red {
+  background-color: #ff4d4d;
+}
+
+.green {
+  background-color: #4dff4d;
+}
+
+.blue {
+  background-color: #4d4dff;
+}
+
+.yellow {
+  background-color: #ffff4d;
+}
+
+.start-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.status {
+  margin-top: 10px;
+  font-weight: bold;
+}

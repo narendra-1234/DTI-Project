@@ -1,0 +1,111 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #aaaaaa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.sudoku-game {
+  text-align: center;
+  background: #aaaaaa;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  width: 600px;
+}
+
+h1 {
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.sudoku-container {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 5px;
+  margin: 20px 0;
+}
+
+.cell {
+  border: 2px solid #ccc;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.cell:hover {
+  background-color: #e7f3ff;
+}
+
+.subgrid-border {
+  border-right: 3px solid #007bff;
+  /* Blue */
+  border-bottom: 3px solid #007bff;
+  /* Blue */
+}
+
+.cell input {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 24px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  background-color: transparent;
+}
+
+.cell input:focus {
+  background-color: #1111ff;
+  /* Light blue */
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.button {
+  background-color: #007bff;
+  /* Blue */
+  color: white;
+  padding: 12px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  font-size: 16px;
+}
+
+.button:hover {
+  background-color: #0056b3;
+  /* Darker blue */
+  transform: scale(1.05);
+}
+
+.status-message {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.status-message.positive {
+  color: #28a745;
+  /* Bootstrap success color */
+}
+
+.status-message.negative {
+  color: #dc3545;
+  /* Bootstrap danger color */
+}
